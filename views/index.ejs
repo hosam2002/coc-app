@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <%- include('./Components/head.ejs') %>
+
+    <body>
+
+        <div class="navbar__menu">
+
+            <ul class="navbar__list">
+
+                <li class="navbar__links"> <a href="#search"> Get Started </a> </li>
+                <li class="navbar__links"> <a href="#leaderboard"> Leaderboard </a> </li>
+                <li class="navbar__links"> <a href="#footer"> About </a> </li>
+
+            </ul>
+
+        </div>
+
+        <header class="header">
+
+            <div class="header__brand">
+
+                <div class="header__logo"> 
+
+                    <%- include('./Components/img.ejs') %>     
+                    
+                </div>
+
+            </div>
+
+            <nav class="header__nav">
+
+                <ul class="header__list">
+
+                    <li class="header__links"> <a href="#search"> Get Started </a> </li>
+                    <li class="header__links"> <a href="#leaderboard"> Leaderboard </a> </li>
+                    <li class="header__links"> <a href="#footer"> About </a> </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="navbar">
+                
+                <input type="checkbox" class="navbar__checkbox" name="toggle" id="toggle">
+                <label for="toggle" class="navbar__button"> <span class="navbar__icon"></span> </label>
+
+            </div>
+
+        </header>
+
+        <div class="home">
+
+            <div class="home__header"> clashFinder </div>
+
+            <div class="home__content"> 
+
+                Get a bunch of informations about clans and players
+
+            </div>
+
+            <div class="home__footer">
+
+                <a href="#search" class="home__links button-animation"> Get Started </a>
+
+            </div>
+
+            <div class="home__shape">
+
+                <div class="home__shape--top-left">
+
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+                        <path class="cls-1" d="M465.2,408.5l-113.7-96.7c-11.8-10.6-24.3-15.4-34.5-15,26.9-31.4,43.1-72.2,43.1-116.8C360,80.6,279.4,0,180,0S0,80.6,0,180s80.6,180,180,180,85.4-16.2,116.8-43.1c-.5,10.1,4.4,22.7,15,34.5l96.7,113.7c16.6,18.4,43.6,20,60.1,3.5,16.5-16.5,14.9-43.6-3.5-60.1h0Zm-285.1-108.5c-66.3,0-120-53.7-120-120S113.7,60,180,60s120,53.7,120,120-53.7,120-120,120Z"/>
+                    </svg>
+
+                </div>
+
+                <div class="home__shape--bottom-right">
+
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+                        <path class="cls-1" d="M465.2,408.5l-113.7-96.7c-11.8-10.6-24.3-15.4-34.5-15,26.9-31.4,43.1-72.2,43.1-116.8C360,80.6,279.4,0,180,0S0,80.6,0,180s80.6,180,180,180,85.4-16.2,116.8-43.1c-.5,10.1,4.4,22.7,15,34.5l96.7,113.7c16.6,18.4,43.6,20,60.1,3.5,16.5-16.5,14.9-43.6-3.5-60.1h0Zm-285.1-108.5c-66.3,0-120-53.7-120-120S113.7,60,180,60s120,53.7,120,120-53.7,120-120,120Z"/>
+                    </svg>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="curve-bottom">
+
+            <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z"></path>
+            </svg>
+            
+        </div>
+
+        <div class="search" id="search">
+
+            <div class="search__clan">
+
+                <div class="search__header"> Find Clan </div>
+
+                <div class="search__content">
+
+                    Enter clan tag prefixed with <span>#</span> symbol, to get informations about
+                    specific clan
+                    
+                </div>
+
+                <div class="search__input">
+
+                    <form action="/search/clan">
+
+                        <input type="search" name="clanTag" id="clan" placeholder="#">
+                        
+                    </form>
+            
+                </div>
+
+                <div class="search__footer">
+
+                    Powered by <span>Supercell</span>
+
+                </div>
+
+            </div>
+
+            <div class="search__player">
+
+                <div class="search__header"> Find Player </div>
+
+                <div class="search__content">
+
+                    Enter player tag prefixed with <span>#</span> symbol, to get informations
+                    about specific player
+                
+                </div>
+
+                <div class="search__input">
+
+                    <form action="/search/player">
+
+                        <input type="search" name="playerTag" id="clan" placeholder="#">
+                        
+                    </form>
+            
+                </div>
+
+                <div class="search__footer">
+
+                    Powered by <span>Supercell</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="leaderboard" id="leaderboard">
+
+            <div class="leaderboard__heading"> Leaderboard </div>
+
+            <div class="leaderboard__content">
+
+                <div class="leaderboard__clan">
+
+                    <div class="leaderboard__badge">
+
+                        <div class="leaderboard__badge--icon">
+
+                            <img src="<%= clan1Badge %>">
+
+                        </div>
+
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">name</div>
+                        <div class="leaderboard__value"> <%= clan1Name %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">points</div>
+                        <div class="leaderboard__value"> <%= clan1Points%> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">country</div>
+                        <div class="leaderboard__value"> <%= clan1Country %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__footer">
+
+                        1st
+
+                    </div>
+
+                </div>
+
+                <div class="leaderboard__clan">
+
+                    <div class="leaderboard__badge">
+
+                        <div class="leaderboard__badge--icon">
+
+                            <img src="<%= clan2Badge %>">
+
+                        </div>
+
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">name</div>
+                        <div class="leaderboard__value"> <%= clan2Name %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">points</div>
+                        <div class="leaderboard__value"> <%= clan2Points %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">country</div>
+                        <div class="leaderboard__value"> <%= clan2Country %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__footer">
+
+                        2nd
+
+                    </div>
+
+                </div>
+
+                <div class="leaderboard__clan">
+
+                    <div class="leaderboard__badge">
+
+                        <div class="leaderboard__badge--icon">
+
+                            <img src="<%= clan3Badge %>">
+
+                        </div>
+
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">name</div>
+                        <div class="leaderboard__value"> <%=  clan3Name %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">points</div>
+                        <div class="leaderboard__value"> <%= clan3Points %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__item">
+
+                        <div class="leaderboard__key">country</div>
+                        <div class="leaderboard__value"> <%= clan3Country %> </div>
+                        
+                    </div>
+
+                    <div class="leaderboard__footer">
+
+                        3rd
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="curve-top">
+
+            <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z"></path>
+            </svg>
+
+        </div>
+
+        <%- include('./Components/footer.ejs') %>
+
+    </body>
+
+    <script>
+
+        document.querySelector('.navbar__button').addEventListener('click', () => {
+
+        document.querySelector('.navbar__menu').classList.toggle('navbar__open') 
+        })
+
+    </script>
+
+</html>

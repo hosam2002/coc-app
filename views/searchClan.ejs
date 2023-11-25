@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <%- include('./Components/head.ejs') %>
+
+    <body>
+
+        <div class="navbar__menu">
+
+            <ul class="navbar__list">
+
+                <li class="navbar__links"> <a href="/"> Home </a> </li>
+                <li class="navbar__links"> <a href="/#search"> Get Started </a> </li>
+                <li class="navbar__links"> <a href="/#leaderboard"> Leaderboard </a> </li>
+                <li class="navbar__links"> <a href="#footer"> About </a> </li>
+
+            </ul>
+
+        </div>
+
+        <header class="header">
+
+            <div class="header__brand">
+
+                <div class="header__logo"> 
+
+                    <%- include('./Components/img.ejs') %>
+                                        
+                </div>
+
+            </div>
+
+            <nav class="header__nav">
+
+                <ul class="header__list">
+
+                    <li class="header__links"> <a href="/"> Home </a> </li>
+                    <li class="header__links"> <a href="/#search"> Get Started </a> </li>
+                    <li class="header__links"> <a href="/#leaderboard"> Leaderboard </a> </li>
+                    <li class="header__links"> <a href="#footer"> About </a> </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="navbar">
+                
+                <input type="checkbox" class="navbar__checkbox" name="toggle" id="toggle">
+                <label for="toggle" class="navbar__button"> <span class="navbar__icon"></span> </label>
+
+            </div>
+
+        </header>
+
+        <div class="home">
+
+            <div class="home__header"> Search Result </div>
+
+            <div class="home__footer">
+
+                <a href="/" class="home__links button-animation"> Home Page </a>
+
+            </div>
+
+        </div>
+
+        <div class="curve-bottom">
+
+            <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z"></path>
+            </svg>
+            
+        </div>
+
+        <!-- Clan Result -->
+        <div class="result-page" id="result-page">
+
+            <div class="result">
+
+                <div class="result__badge">
+
+                    <div class="result__badge--icon"> 
+                        
+                        <img src='<%= badge%>'>
+                    
+                    </div>
+
+                </div>
+
+                <div class="result__item">
+
+                    <div class="result__left"> Name </div>
+                    <div class="result__right"> <%= name%> </div>
+
+                </div>
+
+                <div class="result__item">
+
+                    <div class="result__left"> Level </div>
+                    <div class="result__right"> <%= level%> </div>
+
+                </div>
+
+                <div class="result__item">
+
+                    <div class="result__left"> Leader </div>
+                    <div class="result__right"> <%= leader%> </div>
+
+                </div>
+
+                <div class="result__item">
+
+                    <div class="result__left"> Country </div>
+                    <div class="result__right"> <%= location%> </div>
+
+                </div>
+
+                <div class="result__item">
+
+                    <div class="result__left"> Members </div>
+                    <div class="result__right"> <%= members%> </div>
+
+                </div>
+
+                <div class="result__item">
+
+                    <div class="result__left"> Won Wars </div>
+                    <div class="result__right"> <%= wonWars%> </div>
+
+                </div>
+
+                <div class="result__item">
+
+                    <div class="result__left"> Clan Points </div>
+                    <div class="result__right"> <%= points%> </div>
+
+                </div>
+
+                <div class="result__item">
+                    
+                    <div class="result__left"> Current Leaque </div>
+                    <div class="result__right"> <%= leaque%> </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="curve-top">
+
+            <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z"></path>
+            </svg>
+
+        </div>
+
+        <%- include('./Components/footer.ejs') %>
+
+    </body>
+
+    <script>
+
+        document.querySelector('.navbar__button').addEventListener('click', () => {
+
+        document.querySelector('.navbar__menu').classList.toggle('navbar__open') 
+        })
+
+    </script>
+
+</html>

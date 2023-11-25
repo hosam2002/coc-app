@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <%- include('./Components/head.ejs') %>
+
+    <body>
+
+        <div class="navbar__menu">
+
+            <ul class="navbar__list">
+
+                <li class="navbar__links"> <a href="/"> Home </a> </li>
+                <li class="navbar__links"> <a href="/#search"> Get Started </a> </li>
+                <li class="navbar__links"> <a href="/#leaderboard"> Leaderboard </a> </li>
+                <li class="navbar__links"> <a href="#footer"> About </a> </li>
+
+            </ul>
+
+        </div>
+
+        <header class="header">
+
+            <div class="header__brand">
+
+                <div class="header__logo"> 
+                    
+                    <%- include('./Components/img.ejs') %>
+                    
+                </div>
+
+            </div>
+
+            <nav class="header__nav">
+
+                <ul class="header__list">
+
+                    <li class="header__links"> <a href="/"> Home </a> </li>
+                    <li class="header__links"> <a href="/#search"> Get Started </a> </li>
+                    <li class="header__links"> <a href="/#leaderboard"> Leaderboard </a> </li>
+                    <li class="header__links"> <a href="#footer"> About </a> </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="navbar">
+                
+                <input type="checkbox" class="navbar__checkbox" name="toggle" id="toggle">
+                <label for="toggle" class="navbar__button"> <span class="navbar__icon"></span> </label>
+
+            </div>
+
+        </header>
+
+        <div class="home">
+
+            <div class="home__header"> Error! </div>
+
+            <div class="home__content"> 
+
+                Something went wrong, See possible reasons below
+
+            </div>
+
+            <div class="home__footer">
+
+                <a href="/" class="home__links button-animation"> Home Page </a>
+
+            </div>
+
+        </div>
+
+        <div class="curve-bottom">
+
+            <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z"></path>
+            </svg>
+            
+        </div>
+
+        <!-- Not Found Page start-->
+
+        <div class="error">
+
+            <div class="error__container">
+                
+                <div class="error__message">
+
+                    <div class="error__message--icon">
+
+                        <!-- Forward Fill -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-forward-fill" viewBox="0 0 16 16"><path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/></svg>
+    
+                    </div>
+    
+                    <div class="error__message--reason"> Invalid tag </div>
+
+                </div>
+
+                <div class="error__message">
+
+                    <div class="error__message--icon">
+
+                        <!-- Forward Fill -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-forward-fill" viewBox="0 0 16 16"><path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/></svg>
+    
+                    </div>
+    
+                    <div class="error__message--reason"> Not allowed IP Address </div>
+
+                </div>
+
+                <div class="error__message">
+
+                    <div class="error__message--icon">
+
+                        <!-- Forward Fill -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-forward-fill" viewBox="0 0 16 16"><path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/></svg>
+    
+                    </div>
+    
+                    <div class="error__message--reason"> Bad internet connection </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Not Found Page end -->
+
+        <div class="curve-top">
+
+            <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z"></path>
+            </svg>
+
+        </div>
+
+        <%- include('./Components/footer.ejs') %>
+
+    </body>
+
+    <script>
+
+        document.querySelector('.navbar__button').addEventListener('click', () => {
+
+        document.querySelector('.navbar__menu').classList.toggle('navbar__open') 
+        })
+
+    </script>
+
+</html>
